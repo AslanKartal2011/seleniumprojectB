@@ -23,6 +23,7 @@ public class Task1_locators_getText {
         loginButton.click();
 
         WebElement errorMessage = driver.findElement( By.className( "errortext" ) );
+
         String expectedErrorMessage = "Incorrect login or password";
         String actualErrorMessage = errorMessage.getText();
 

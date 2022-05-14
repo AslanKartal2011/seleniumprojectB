@@ -12,19 +12,18 @@ public class Task5_locators_getText_getAttribute {
         WebDriver driver= WebDriverFactory.getDriver( "chrome" );
         driver.manage().window().maximize();
 
-        driver.manage().window().maximize();
-        driver.get("https://login1.nextbasecrm.com/" );
+        driver.get("https://login1.nextbasecrm.com/?forgot_password=yes" );
 
         WebElement username= driver.findElement( By.className( "login-inp" ) );
         username.sendKeys( "incorrect" );
 
-
         WebElement loginButton =driver.findElement( By.className( "login-btn" ));
         loginButton.click();
 
+        WebElement errorText=driver.findElement( By.className( "errortext") );
 
-        String expectedLogin=" Incorrect login or password ";
-        String actualLogin=loginButton.getText();
+        String expectedLogin="Login or E-mail not found";
+        String actualLogin=errorText.getText();
 
         if(actualLogin.equals ( expectedLogin )){
             System.out.println( "Passed" );

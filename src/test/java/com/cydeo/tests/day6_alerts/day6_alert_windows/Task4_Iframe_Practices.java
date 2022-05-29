@@ -31,8 +31,8 @@ public class Task4_Iframe_Practices {
        WebElement yourContentGoesHereText = driver.findElement( By.xpath("//p") );
        Assert.assertTrue( yourContentGoesHereText.isDisplayed() );
 
-       driver.switchTo().parentFrame();
-       WebElement headerText=driver.findElement( By.xpath( "//h3 " ) );
+      driver.switchTo().parentFrame();
+      WebElement headerText=driver.findElement( By.xpath( "//h3 " ) );
 
 
 

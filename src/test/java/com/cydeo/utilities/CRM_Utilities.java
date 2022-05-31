@@ -1,4 +1,4 @@
-package com.cydeo.tests.day7_webtables_utilities_javafaker;
+package com.cydeo.utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

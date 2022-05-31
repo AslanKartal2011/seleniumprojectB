@@ -1,4 +1,4 @@
-package com.cydeo.tests.day8_properties_config_reader;
+package com.cydeo.utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

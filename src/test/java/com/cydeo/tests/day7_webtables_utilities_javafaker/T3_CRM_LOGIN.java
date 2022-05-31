@@ -2,9 +2,7 @@ package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -21,26 +19,13 @@ public class T3_CRM_LOGIN {
     }
 
     @Test
-    public void crm_login_test(){
-        driver.get( "https://login1.nextbasecrm.com" );
+    public void crm_login_test_3(){
 
-        WebElement inputUsername= driver.findElement(By.xpath("//input[@name='USER_LOGIN']") );
-        inputUsername.sendKeys(  "helpdesk@cybertekschool.com");
-
-        WebElement inputPassword = driver.findElement(By.xpath( "//input[@name='USER_PASSWORD']" ));
-        inputUsername.sendKeys(  "UserUser");
-
-        WebElement loginButton = driver.findElement( By.xpath( "//input[@value='Log In']") );
-        loginButton.click();
-
-        BrowserUtils.verifyTitle( driver,"Authorization" );
-
-
-
-
-
-
-
+        driver.get( "https://login.nextbasecrm.com/");
+        CRM_Utilities.crm_login(driver,"helpdesk2","UserUser");
+        BrowserUtils.sleep(2);
+        BrowserUtils.verifyTitle( driver,"(2) Portal" );
 
     }
 }
+

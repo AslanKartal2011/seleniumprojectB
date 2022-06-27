@@ -1,6 +1,6 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
-import com.cydeo.tests.day9_javafaker_testfaker_testbase_driverUtil.TestBase;
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.CRM_Utilities;
 import org.testng.annotations.Test;

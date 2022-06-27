@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LibraryLoginPage {
 
+
     public LibraryLoginPage(){
 
         PageFactory.initElements( Driver.getDriver(),this );
@@ -19,10 +20,10 @@ public class LibraryLoginPage {
     public  WebElement inputPassword;
 
     @FindBy(xpath = "//button[.='Sign in']")
-    public WebElement signInButton;
+    public static WebElement signInButton;
 
     @FindBy(xpath ="//[.='This field is required.']/div")
-    public WebElement fieldRequiredErrorMessage;
+    public static WebElement fieldRequiredErrorMessage;
 
     @FindBy(xpath="//div[.='Sorry,Wrong Email or Password']")
     public WebElement wrongEmailOrPasswordErrorMessage;
